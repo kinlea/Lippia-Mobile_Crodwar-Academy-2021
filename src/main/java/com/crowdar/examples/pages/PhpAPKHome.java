@@ -31,7 +31,7 @@ public class PhpAPKHome extends PageBaseMobile {
     }
 
     public void tapVisaButon() {
-        //clickElement(MobileBy.AccessibilityId(VISA_BUTON_ACCESIBILITY_ID));
+        clickElement(MobileBy.AccessibilityId(VISA_BUTON_ACCESIBILITY_ID));
     }
 
     public void ingresarDestinos(String from, String to) {
