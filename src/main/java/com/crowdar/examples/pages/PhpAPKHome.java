@@ -30,42 +30,45 @@ public class PhpAPKHome extends PageBaseMobile {
         this.url = "";
     }
 
-  public void tapVisaButon(){
-      //clickElement(MobileBy.AccessibilityId(VISA_BUTON_ACCESIBILITY_ID));
-  }
-  public void ingresarDestinos(String from, String to){
-      tapFrom();
-      completeField(By.id(INPUT_FROM_TO_ID),from);
-      tapCountry();
-      tapTo();
-      completeField(By.id(INPUT_FROM_TO_ID),to);
-      tapCountry();
-  }
-    public void completeFormData(String fName, String lName, String email, String phone, String notes){
-        completeField(By.id(INPUT_FIRST_NAME_ID),fName);
-        completeField(By.id(INPUT_LAST_NAME_ID),lName);
-        completeField(By.id(INPUT_EMAIL_ID),email);
-        completeField(By.id(INPUT_PHONE_ID),phone);
-        completeField(By.id(INPUT_NOTES_ID),notes);
+    public void tapVisaButon() {
+        //clickElement(MobileBy.AccessibilityId(VISA_BUTON_ACCESIBILITY_ID));
     }
 
-    public void tapFrom(){
+    public void ingresarDestinos(String from, String to) {
+        tapFrom();
+        completeField(By.id(INPUT_FROM_TO_ID), from);
+        tapCountry();
+        tapTo();
+        completeField(By.id(INPUT_FROM_TO_ID), to);
+        tapCountry();
+    }
+
+    public void completeFormData(String fName, String lName, String email, String phone, String notes) {
+        completeField(By.id(INPUT_FIRST_NAME_ID), fName);
+        completeField(By.id(INPUT_LAST_NAME_ID), lName);
+        completeField(By.id(INPUT_EMAIL_ID), email);
+        completeField(By.id(INPUT_PHONE_ID), phone);
+        completeField(By.id(INPUT_NOTES_ID), notes);
+    }
+
+    public void tapFrom() {
         clickElement(By.id(BUTON_FROM_ID));
     }
 
-    public void tapTo(){
+    public void tapTo() {
         clickElement(By.id(BUTON_TO_ID));
     }
 
-         public void tapCountry(){
-         clickElement(By.id(BUTON_COUNTRY_ID));
-     }
+    public void tapCountry() {
+        clickElement(By.id(BUTON_COUNTRY_ID));
+    }
 
-     public void tapSubmit(){
-         clickElement(By.id(BUTON_SUBMIT_ID));
-     }
-      public void check(){
-          Assert.assertTrue(getElementText(By.id(CHECK_TEXT_ID)).equals("Reservation Submitted"),"Error al completar la reserva");
-      }
+    public void tapSubmit() {
+        clickElement(By.id(BUTON_SUBMIT_ID));
+    }
+
+    public void check() {
+        Assert.assertTrue(getElementText(By.id(CHECK_TEXT_ID)).equals("Reservation Submitted"), "Error al completar la reserva");
+    }
 
 }
